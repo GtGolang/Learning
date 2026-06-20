@@ -10,10 +10,15 @@ func HomeHandler(w http.ResponseWriter, r *http.Request){
 		http.NotFound(w,r)
 		return
 	 }
-	 fmt.Fprint(w,"Welcome to the fundation of something Bg")
+	 //fmt.Fprint(w,"Welcome to the fundation of something Bg")
+	 http.ServeFile(w,r,"./index.html")
+	fmt.Println("running the page index.html")
 }
+
+
 func ApiHandler(w http.ResponseWriter, r *http.Request){
 	w.Header().Set("content-Type","aplication/json")
-	w.WriteHeader(http.StatusOk)
+	w.WriteHeader(http.StatusOK)
 	w.Write([]byte(`{"message": "hello from the Api endpoint!"}`))
 }
+
