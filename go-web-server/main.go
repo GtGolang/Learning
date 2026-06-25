@@ -13,6 +13,7 @@ func main(){
 
 	//2. register route paths and their corresponding handler functions
 	mux.HandleFunc("/",sr.HomeHandler)
+	mux.HandleFunc("/static/",sr.CssHandler)
 	mux.HandleFunc("/api/data",sr.ApiHandler)
 	//3. configure explicit server parameters for safety and timeouts
 	server:= &http.Server{

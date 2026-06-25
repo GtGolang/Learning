@@ -1,0 +1,9 @@
+.body{
+	box-sizing:border-box;
+	display:flex;
+	justify-content: center; /*centers horizontally*/
+	align-items:center; /*center vertically*/
+	height:100vh; /*gives the parent full viewport height to show vertical centering*/
+	border: 3px solid green;
+	background-color: rgb(222,217,217);
+}

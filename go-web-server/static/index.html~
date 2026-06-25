@@ -6,7 +6,7 @@
 		<link rel=stylesheet href="/static/style.css">
 		<title>GuateGolang</title>
 	</head>
-	<body class="body" >
+	<body>
 		<header> <h1> Welcome Back GuateGolang</h1> </header>
 		<nav>
 			<ul>
