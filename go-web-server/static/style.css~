@@ -1,9 +1,19 @@
-*{
-	box-sizing:border-box;
-	display:flex;
-	justify-content: center; /*centers horizontally*/
-	align-items:center; /*center vertically*/
-	height:100vh; /*gives the parent full viewport height to show vertical centering*/
-	border: 3px solid green;
-	background-color: rgb(222,217,217);
+
+.body{
+box-sizing:border-box;
+display:flex;
+justify-content: center; /*centers horizontally*/
+align-items:center; /*center vertically*/
+height:100vh; /*gives the parent full viewport height to show vertical centering*/
+border-width: 3px;/*sets the thickness to 3px*/
+border-style: solid; /*Sets the style*/
+border-color: rgb(77, 199, 240);    
+background-color: rgb(222,217,217);
 }
+.unitedlist{
+ display:flex;
+ justify-content: space-between;
+ height:4vh;
+ background-color: rgb(18, 114, 148);
+}
+
