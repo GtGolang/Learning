@@ -15,6 +15,7 @@ func main() {
 
 	//2. register route paths and their corresponding handler functions
 	mux.HandleFunc("/", handlers.Home)
+	mux.HandleFunc("/static/", handlers.ServeCss)
 
 	//3. configure explicit server parameters for safety and timeouts
 	server := &http.Server{
