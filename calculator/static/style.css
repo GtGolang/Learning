@@ -1,3 +1,41 @@
 .mainContainer{
+    display: flex;
+    min-height: 100vh;/*makes the flex mainContainer at least as tall as the screen*/
     background-color:aquamarine;
+}
+.subContainer1{
+    flex-basis: 20%;/*we set the container size by 30%*/
+    background-color: aliceblue;
+    flex-shrink: 1;/*we allow the contaner to keep its form while shrinking*/
+}
+.subContainer2{
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 1;/*we allow the contaner to keep its form while shrinking*/
+    background-color: brown;
+    flex-grow: 1;/*we make this container fulfill the remainder space*/
+    align-items: center;
+    justify-content: space-between;
+}
+.logo{
+ border-width: 3px;/*sets the thickness to 3px*/
+border-style: solid; /*Sets the style*/
+border-color: rgb(77, 199, 240);    
+    background-color: red;
+    min-width: 100%;
+    min-height: 15%;
+}
+.calculator{
+    border-width: 3px;/*sets the thickness to 3px*/
+border-style: solid; /*Sets the style*/
+border-color: rgb(77, 199, 240);    
+    background-color: blue;
+    flex-basis: 30%;
+}
+.results{
+    border-width: 3px;/*sets the thickness to 3px*/
+border-style: solid; /*Sets the style*/
+border-color: rgb(77, 199, 240);    
+    background-color: white;
+    flex-basis: 30%;
 }
