@@ -1,7 +1,6 @@
 package handlers
 
 import (
-	"fmt"
 	"net/http"
 )
 
@@ -11,5 +10,6 @@ func Home(w http.ResponseWriter, r *http.Request) {
 		http.NotFound(w, r)
 		return
 	}
-	fmt.Fprintf(w, "welcome to root calcularor")
+	//fmt.Fprintf(w, "welcome to root calcularor")
+	http.ServeFile(w, r, ".static/index.html")
 }
