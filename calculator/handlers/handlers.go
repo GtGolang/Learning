@@ -37,3 +37,20 @@ func ServeCss(w http.ResponseWriter, r *http.Request) {
 	fmt.Println("the file" + filePath + " is being served")
 
 }
+
+func ServeImg(w http.ResponseWriter, r *http.Request) {
+	if r.URL.Path != "/static/images/images.png" {
+		http.NotFound(w, r)
+	}
+	//we convert the "/Images/" to "\Images\"
+	cleanedPath := filepath.Clean(r.URL.Path)
+
+	//we add the "." to "/Images/"
+	completePath := "." + cleanedPath
+
+	//we let golang safely stream the file to the browser
+	http.ServeFile(w, r, completePath)
+	//write on terminal the file is being served
+	fmt.Println("the file" + completePath + " is being served")
+
+}

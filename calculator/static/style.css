@@ -12,25 +12,47 @@
     display: flex;
     flex-direction: column;
     flex-shrink: 1;/*we allow the contaner to keep its form while shrinking*/
-    background-color: brown;
+    /*background-color: brown;*/ 
     flex-grow: 1;/*we make this container fulfill the remainder space*/
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
 }
+
+
 .logo{
- border-width: 3px;/*sets the thickness to 3px*/
+ border-width: 5px;/*sets the thickness to 3px*/
 border-style: solid; /*Sets the style*/
-border-color: rgb(77, 199, 240);    
-    background-color: red;
-    min-width: 100%;
+border-color: #5e6561;    
+    /*background-color:white;*/
+    min-width: 50%;
     min-height: 15%;
+    overflow: hidden;/*to lock the logo's image inside this contianer av
+    avoidin it to grow more than its container*/
+    text-align: center;/*align the content to the center*/
+    border-radius: 50px;
+}
+.logo img{
+    min-width: 200px;
+    max-height: 200px;
+    transition: transform 0.4s ease-in-out;
 }
 .calculator{
+    display: flex;
     border-width: 3px;/*sets the thickness to 3px*/
 border-style: solid; /*Sets the style*/
-border-color: rgb(77, 199, 240);    
-    background-color: blue;
+border-color:rgb(165, 153, 153);    
+    background-color:white;
     flex-basis: 30%;
+    width: 90%;
+    max-height: auto;
+}
+.UiCalculator{
+    width: 60%;
+    background-color: blue;
+}
+.BigLabel{
+    width: 30%;
+    background-color: blueviolet;
 }
 .results{
     border-width: 3px;/*sets the thickness to 3px*/
