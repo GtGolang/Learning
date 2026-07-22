@@ -54,3 +54,15 @@ func ServeImg(w http.ResponseWriter, r *http.Request) {
 	fmt.Println("the file" + completePath + " is being served")
 
 }
+func ServeJs(w http.ResponseWriter, r *http.Request) {
+	if r.URL.Path != "/static/js/myjs.js" {
+		http.NotFound(w, r)
+	}
+	//we convert the "/stati/js/myjs.js" to "\static\js\myjs.js"
+	convertedPath := filepath.Clean(r.URL.Path)
+	//adding the "." to the new path "\static\js\myjs.js"
+	newPath := "." + convertedPath
+	http.ServeFile(w, r, newPath)
+	//write on terminal the file is being served
+	fmt.Println("the file" + newPath + " is being served")
+}

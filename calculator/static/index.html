@@ -5,6 +5,11 @@
 		<meta name=viewport content="width=device-width, initial-scale=1.0">
 		<link rel=stylesheet href="/static/style.css">
         <title>Calculator</title>
+        <!-- Modern way: Downloads early, runs after HTML is ready. 
+          the defer attribute tells the browser to download the 
+          JavaScript file in the background while it loads the HTML,
+           but execution waits until the page is fully parsed.-->
+         <script src="/static/js/myjs.js" defer></script>
     </head>
     <body class="mainContainer">
     <section class="subContainer1">
@@ -18,20 +23,67 @@
          </section>
          <section class="calculator">
             <section class="UiCalculator">
-                <button>1</button>
-                <button>2</button>
-                <button>3</button>
-                <button>4</button>
-                <button>5</button>
-                <button>6</button>
-                <button>7</button>
-                <button>8</button>
-                <button>9</button>
+                <!--call the js function changeLabel with its own button as
+                parameter when is clicked on-->
+                <button onclick="changeLabel(this)">0</button>
+                <button onclick="changeLabel(this)">1</button>
+                <button onclick="changeLabel(this)">2</button>
+                <button onclick="changeLabel(this)">3</button>
+                <button onclick="changeLabel(this)">4</button>
+                <button onclick="changeLabel(this)">5</button>
+                <button onclick="changeLabel(this)">6</button>
+                <button onclick="changeLabel(this)">7</button>
+                <button onclick="changeLabel(this)">8</button>
+                <button onclick="changeLabel(this)">9</button>
+                <button onclick="changeLabel(this)">/</button>
+                <button onclick="changeLabel(this)">*</button>
+                <button onclick="changeLabel(this)">-</button>
+                <button onclick="changeLabel(this)">+</button>
+                <button onclick="changeLabel(this)">.</button>
+                <button onclick="changeLabel(this)">0</button>
+                <button onclick="changeLabel(this)">0</button>
+                <button onclick="changeLabel(this)">0</button>
+                <button onclick="changeLabel(this)">0</button>
+                <button onclick="changeLabel(this)">0</button>
+                <button onclick="changeLabel(this)">0</button>
+                <button onclick="changeLabel(this)">0</button>
+                <button onclick="changeLabel(this)">0</button>
+                <button onclick="changeLabel(this)">0</button>
+                <button onclick="changeLabel(this)">0</button>
+                <button onclick="changeLabel(this)">0</button>
+                <button onclick="changeLabel(this)">0</button>
+                <button onclick="changeLabel(this)">0</button>
+                <button onclick="changeLabel(this)">0</button>
+                <button onclick="changeLabel(this)">0</button>
+                <button onclick="changeLabel(this)">0</button>
+                <button onclick="changeLabel(this)">0</button>
+                <button onclick="changeLabel(this)">0</button>
+                <button onclick="changeLabel(this)">0</button>
+                <button onclick="changeLabel(this)">0</button>
+                <button onclick="changeLabel(this)">0</button>
+                <button onclick="changeLabel(this)">0</button>
+                <button onclick="changeLabel(this)">0</button>
+                <button onclick="changeLabel(this)">0</button>
+                <button onclick="changeLabel(this)">0</button>
+                <button onclick="changeLabel(this)">0</button>
+                <button onclick="changeLabel(this)">0</button>
+                <button onclick="changeLabel(this)">0</button>
+                <button onclick="changeLabel(this)">0</button>
+                <button onclick="changeLabel(this)">0</button>
+                <button onclick="changeLabel(this)">0</button>
+                <button onclick="changeLabel(this)">0</button>
+                <button onclick="changeLabel(this)">0</button>
+                <button onclick="changeLabel(this)">0</button>
+                <button onclick="changeLabel(this)">0</button>
+                <button onclick="changeLabel(this)">0</button>
+                <button onclick="changeLabel(this)">0</button>
+                <button onclick="changeLabel(this)">0</button>
+                <button onclick="changeLabel(this)">0</button>
+
             </section>
-            <section class="BigLabel">
-                <p>bigLabel</p>
+            <section class="BigLabel"> 
+                <label id="myLabel">0</label>
             </section>
-            <p>calculator area</p>
          </section>
          <section class="results">
             <p>results area</p>

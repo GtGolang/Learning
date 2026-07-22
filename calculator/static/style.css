@@ -16,6 +16,7 @@
     flex-grow: 1;/*we make this container fulfill the remainder space*/
     align-items: center;
     justify-content: center;
+    width: 60%;
 }
 
 
@@ -45,10 +46,22 @@ border-color:rgb(165, 153, 153);
     flex-basis: 30%;
     width: 90%;
     max-height: auto;
+    justify-content: space-evenly;    
 }
 .UiCalculator{
+    display: flex;
+    flex-wrap: wrap;/*moving elements to the next line instead of 
+                    going out of parent's boundary*/
+    
     width: 60%;
-    background-color: blue;
+    justify-content: space-between;/* Centers horizontally (on the main axis) */
+    align-items: center;     /* Centers vertically (on the cross axis) */
+    background-color:black;
+}
+.UiCalculator > button{
+    width: 60px;
+    height: 30px;
+    border-radius: 50%;
 }
 .BigLabel{
     width: 30%;

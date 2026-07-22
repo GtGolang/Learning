@@ -17,7 +17,7 @@ func main() {
 	mux.HandleFunc("/", handlers.Home)
 	mux.HandleFunc("/static/", handlers.ServeCss)
 	mux.HandleFunc("/static/images/", handlers.ServeImg)
-
+	mux.HandleFunc("/static/js/", handlers.ServeJs)
 	//3. configure explicit server parameters for safety and timeouts
 	server := &http.Server{
 		//first the port we are gonna listen to wich is 8080
